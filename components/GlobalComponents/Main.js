@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Web3 from 'web3';
+
+
 class Main extends Component {
   async loadWeb3() {
     if (window.ethereum) {
@@ -27,8 +29,8 @@ class Main extends Component {
   }
 
   render () {    
-    const web3 = window.web3
-    const accounts = web3.eth.getAccounts()
+    //const web3 = new window.web3
+    //const accounts = web3.eth.getAccounts()
     var i = 0;
     let adminaddress;
     adminaddress = '0x496764D595FBFC752FB73416759406e296b68851'; // revise to actual admin!
