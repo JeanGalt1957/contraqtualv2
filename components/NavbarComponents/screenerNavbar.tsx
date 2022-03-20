@@ -63,7 +63,6 @@ const ScreenerNavbar = (): React.ReactElement => {
                         </Link>
 
                         <NavElement textContent="Polls" page="polls" />
-                        <NavElement textContent="Oracles" page="oracles" />
                         <NavElement textContent="Active Polls" page="activepolls" />
                     </div> 
 

@@ -2,7 +2,6 @@ import '../../styles/PagesStyles/globals.css'
 import React from 'react'
 import ScreenerLayoutWrapper from '../../components/GlobalComponents/screenerLayoutWrapper'
 import Polls from "./polls"
-import Oracles from "./oracles"
 import ActivePolls from "./activepolls"
 import welcome from "../pages/index"
 import { getComponentName } from '../../library/utils'
@@ -17,7 +16,6 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
 
 	else if (
 		Component == Polls ||
-		Component == Oracles ||
 		Component == ActivePolls 
 	) {
 		return (

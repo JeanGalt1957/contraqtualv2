@@ -2,7 +2,6 @@ import BigNumber from "bignumber.js"
 import { IPoll } from "./graphqlQuerys"
 import React from "react"
 import polls from "../src/pages/polls"
-import oracles from "../src/pages/oracles"
 import activePolls from "../src/pages/activepolls"
 import welcome from "../src/pages/index"
 import { USDPrice } from "./data"
@@ -151,8 +150,6 @@ let getComponentName = (component: React.FunctionComponent) => {
     switch (component) {
         case polls:
             return 'Polls'
-        case oracles:
-            return 'Oracles'
         case activePolls:
             return 'Active polls'
         case welcome:
