@@ -109,7 +109,7 @@ const SelectWalletWindow = (props: ISelectWalletWindowProps): React.ReactElement
         try {
             await provider.enable()
             let chainId = await web3.eth.getChainId()
-            if (chainId == 4) {
+            if (chainId == 43114) {
                 rootContext.setWeb3AndAccountsInstance(provider)
             }
             else {
