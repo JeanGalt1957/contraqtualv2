@@ -71,7 +71,6 @@ const AccountButton = (): React.ReactElement => {
             >
                 <div id={styles.balanceDiv}>
                     {new BigNumber(balance).div(new BigNumber('1000000000000000000')).toFixed(9).toString()} AVAX
-                    {/* {displayAmount(rootContext.amountsInUsd, balance)} */}
                 </div>
 
                 <div id={styles.addressDiv}>

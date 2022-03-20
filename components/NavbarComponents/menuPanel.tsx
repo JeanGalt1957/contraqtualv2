@@ -1,9 +1,5 @@
 import React from "react"
 import Link from "next/link"
-import {
-    createReceiverAccount,
-    getReceiverId
-} from '../../library/web3methods'
 import styles from "../../styles/ComponentsStyles/GlobalComponentsStyles/screenerLayout.module.scss"
 import { RootContext, IRootContextType } from '../GlobalComponents/screenerLayoutWrapper'
 import { errorMessageWithoutClick } from "../../library/alertWindows"
@@ -59,7 +55,6 @@ const MenuPanel = (props: IMenuPanelProps): React.ReactElement => {
 
                 <div id={styles.pageElementsMobile}>
                     <PageElement page="polls" textContent="Polls" />
-                    <PageElement page="oracles" textContent="Oracles" />
                     <PageElement page="activepolls" textContent="Active polls" />
                 </div>
 
@@ -102,20 +97,11 @@ const MenuPanel = (props: IMenuPanelProps): React.ReactElement => {
             <>
                 <div 
                     className={styles.menuElement}
-                    onClick={() => {
-                        if (rootContext.web3ConnectionData.account != null) {
-                            createReceiverAccountListener()
-                        }
 
-                        else {
-                            errorMessageWithoutClick(<>Wallet not connected</>)
-                        }
-                    }}
                 >Sing Up as a receiver</div>
 
                 <div
                     className={styles.menuElement} 
-                    onClick={() => window.open(metaData.docsUrl, "_blank")}
                 >User guide</div>
 
                 <div 
@@ -126,17 +112,7 @@ const MenuPanel = (props: IMenuPanelProps): React.ReactElement => {
         )
     }
 
-    const createReceiverAccountListener = async (): Promise<void> => {
-        const reciverId = await getReceiverId(rootContext.web3ConnectionData.accountsStorageInstance, rootContext.web3ConnectionData.account)
 
-        if (reciverId == 0) {
-            await createReceiverAccount(rootContext.web3ConnectionData)
-        }
-
-        else {
-            errorMessageWithoutClick(<>You can only sign up as a receiver once per account</>, 2000)
-        }
-    }
 
     return Result()
 }
