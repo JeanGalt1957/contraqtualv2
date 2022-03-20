@@ -63,10 +63,10 @@ const ScreenerLayoutWrapper = (props: IScreenerLayoutWrapperProps): React.ReactE
         let accountsStorageInstance: Contract = null
 
         if (accounts.length > 0) {
-            if (provider.chainId == '0x4') {
-                pollRewardsInstance = new web3.eth.Contract(contractsMetaData.pollRewardsABI as AbiItem[], contractsMetaData.pollRewardsAddress)
+            if (provider.chainId == '0xa86a') {
                 accountsStorageInstance = new web3.eth.Contract(contractsMetaData.accountsStorageABI as AbiItem[], contractsMetaData.accountsStorageAddress)
             }
+
 
             provider.on('chainChanged', handleChainChanged)
             provider.on('accountsChanged', handleAccountChanged)
@@ -85,8 +85,10 @@ const ScreenerLayoutWrapper = (props: IScreenerLayoutWrapperProps): React.ReactE
 
     const handleChainChanged = () => window.location.reload()
 
-    const handleAccountChanged = async () => {
-        let accounts = await web3ConnectionData.web3.eth.getAccounts()
+    const handleAccountChanged = async (provider: any): Promise<void> => {
+        await window.web3.currentProvider.enable()
+        let web3 = new Web3(window.web3.currentProvider)
+        let accounts = await web3.eth.getAccounts()
         
         setWeb3ConnectionData(prevState => ({
             ...prevState,

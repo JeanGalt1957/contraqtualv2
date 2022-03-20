@@ -2,13 +2,15 @@ import React from 'react'
 import { RootContext, IRootContextType } from '../GlobalComponents/screenerLayoutWrapper'
 import styles from "../../styles/ComponentsStyles/NavbarComponentsStyles/screenerNavbar.module.scss"
 import { errorMessageWithClick } from './../../library/alertWindows'
-import { switchToRinkeby } from './../../library/web3methods'
+import { switchToRinkeby, switchToAvalanche } from './../../library/web3methods'
 import WrongNetworkIcon from "../../public/images/wrongNetwork.svg"
 import BigNumber from 'bignumber.js'
 import AccountInfoWindow from './accountInfoWindow'
 import SelectWalletWindow from './selectWalletWindow'
 import { getAddressBalance } from './../../library/web3methods'
 import { displayAmount } from '../../library/utils'
+
+declare let window: any
 
 const AccountButton = (): React.ReactElement => {
     const [accountInfoWindowDisplayed, setAccountInfoWindowDisplayed] = React.useState<boolean>(false)
@@ -46,7 +48,7 @@ const AccountButton = (): React.ReactElement => {
 
     const Content = (): React.ReactElement => {
         if (rootContext.web3ConnectionData.account != null) {
-            if (isCurrentChainRinkeby()) {
+            if (isCurrentChainAVAX()) {
                 return _AccountButton()
             }
 
@@ -56,7 +58,7 @@ const AccountButton = (): React.ReactElement => {
         return ConnectWalletButton()
     }
 
-    const isCurrentChainRinkeby = () => rootContext.web3ConnectionData.accountsStorageInstance != null
+    const isCurrentChainAVAX = () => rootContext.web3ConnectionData.accountsStorageInstance != null
 
     const _AccountButton = () => {
         return (
@@ -84,11 +86,11 @@ const AccountButton = (): React.ReactElement => {
             <div 
                 id={styles.connectWallet} 
                 className={styles.connectWalletWrongNetwork} 
-                // onClick={rootContext.methods.setArbitrumNetworkWindowDisplayed}
+                
                 onClick={() => {
                     errorMessageWithClick(
-                        <>You are using the wron network, click <a onClick={
-                            () => switchToRinkeby(rootContext.web3ConnectionData.provider)
+                        <>You are using the wrong network, click <a onClick={
+                            () => switchToAvalanche(window.ethereum)
                         } 
                         style={{color: 'lightBlue', cursor: 'pointer'}}>here</a> to change it</>
                     )

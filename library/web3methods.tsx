@@ -176,6 +176,19 @@ const switchToArbitrumTesnetNetwork = async (provider: any) => {
     }
 }
 
+const switchToAvalanche = async (provider: any) => {
+    try {
+        await provider.request({
+            method: 'wallet_switchEthereumChain',
+            params: [{ chainId: '0xa86a'}]
+        })
+    }
+
+    catch(error) {
+        throw error
+    }
+}
+
 const addArbitrumTesnetNetwork = async (provider: any) => {
     try {
         await provider.request({
@@ -220,6 +233,7 @@ export {
     contributorHasRequested,
     switchToRinkeby,
     switchToArbitrumTesnetNetwork,
+    switchToAvalanche,
     addArbitrumTesnetNetwork,
     getGasPrice,
     getAddressBalance,
