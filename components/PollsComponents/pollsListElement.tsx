@@ -93,7 +93,7 @@ const PollListElement = (props: IPollListElementProps): React.ReactElement => {
 
                     <div className={styles.pollElementRowMobile}>
                         <div>Total contributed:</div>
-                        <div>{fromWei(props.pollData.totalAmountContributed)} ETH</div>
+                        <div>{fromWei(props.pollData.totalAmountContributed)} AVAX</div>
                     </div> 
 
                     <div className={styles.pollElementRowMobile}>
@@ -137,7 +137,7 @@ const PollListElement = (props: IPollListElementProps): React.ReactElement => {
                     <div>#{props.pollData.id}</div>
                     <div>{state.pollStatus != null ? state.pollStatus[0] : "-"}</div>
                     <div>{state.pollStatus != null ? state.pollStatus[1] : "-"}</div>
-                    <div>{fromWei(props.pollData.totalAmountContributed)} ETH</div>
+                    <div>{fromWei(props.pollData.totalAmountContributed)} AVAX</div>
                     <div>{getReadableDate(props.pollData.dateLimit)}</div>
                     <div>#{props.pollData.receiverId}</div>
                     <div>#{props.pollData.oracleId}</div>

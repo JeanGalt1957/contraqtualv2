@@ -171,7 +171,7 @@ const displayAmount = async(amountInUSD: boolean, amount: string) => {
         return `$${bnEther.multipliedBy(usdPrice.valueOf()).toString()}`
     }
 
-    return `${bnEther.toFixed(9).toString()} ETH`
+    return `${bnEther.toFixed(9).toString()} AVAX`
 }
 
 export {

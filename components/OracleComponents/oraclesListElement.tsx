@@ -38,12 +38,12 @@ const OraclesListElement = (props: IOraclesListElementProps): React.ReactElement
 
                 <div className={styles.oracleElementRowMobile}>
                     <div>Oracle fee</div>
-                    <div>{converGWeiToEth(props.oracleData.oracleFee)} ETH</div>
+                    <div>{converGWeiToEth(props.oracleData.oracleFee)} AVAX</div>
                 </div>
 
                 <div className={styles.oracleElementRowMobile}>
                     <div>Amount managed</div>
-                    <div>{fromWei(props.oracleData.amountManaged)} ETH</div>
+                    <div>{fromWei(props.oracleData.amountManaged)} AVAX</div>
                 </div>
 
                 <div className={styles.oracleElementRowMobile}>
@@ -69,8 +69,8 @@ const OraclesListElement = (props: IOraclesListElementProps): React.ReactElement
             <div className={styles.oracleElement}>
                 <div>#{props.oracleData.id}</div>
                 <div>{getDaysAndHoursFromUnix(props.oracleData.responseTime)}</div>
-                <div>{converGWeiToEth(props.oracleData.oracleFee)} ETH</div>
-                <div>{fromWei(props.oracleData.amountManaged)} ETH</div>
+                <div>{converGWeiToEth(props.oracleData.oracleFee)} AVAX</div>
+                <div>{fromWei(props.oracleData.amountManaged)} AVAX</div>
                 <div>{getTwoDecimalPercent((Number(props.oracleData.numberPollsHandled) - Number(props.oracleData.numberPollsWrong)), props.oracleData.numberPollsHandled)}</div>
                 <div>{props.oracleData.numberPollsWrong}</div>
                 <div>{props.oracleData.numberPollsHandled}</div>
