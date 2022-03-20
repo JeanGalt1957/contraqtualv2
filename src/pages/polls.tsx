@@ -1,5 +1,6 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { IRootContextType, RootContext } from '../../components/GlobalComponents/screenerLayoutWrapper'
+import LoadBets from '../../components/GlobalComponents/betloader'
 
 interface IPollsState {
     idSearched: string
@@ -16,15 +17,11 @@ export default function Polls(): React.ReactElement {
 
     return (
         <div>
-            To be populated
+            Bets here
+            <LoadBets/>
         </div>
     )
 }
-
-// async function getStaticProps() {
-//     const client = useApolloClient()
-//     let results = await client.query<IPoll[]>({query: first5PollsQuery})
-// }
 
 export type {
     IPollsState

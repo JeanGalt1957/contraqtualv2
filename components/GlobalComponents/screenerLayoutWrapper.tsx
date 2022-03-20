@@ -107,6 +107,7 @@ const ScreenerLayoutWrapper = (props: IScreenerLayoutWrapperProps): React.ReactE
         setAmountsInUsd: setAmountsInUsd
     }
 
+
     return (
         <ApolloProvider client={client}>
             <RootContext.Provider value={rootContext}>
