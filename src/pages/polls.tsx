@@ -20,23 +20,9 @@ export default function Polls(): React.ReactElement {
     }, [])
 
     return (
-        <>
-
-            <ScreenerSearchAndCreate 
-                inputPlaceholder='Enter the receiver ID to see his polls or the poll ID' 
-                createButtonText='Create poll' 
-                idSearched={idSearched}
-                setIdSearched={setIdSearched}
-                setCreateWindowDisplayed={() => {setCreatePollWindowDisplayed(true)}}
-            />
-            
-            <PollsList idSearched={idSearched} />  
-
-            <CreatePollWindow 
-                windowDisplayed={createPollWindowDisplayed} 
-                closeWindow={() => {setCreatePollWindowDisplayed(false)}}
-            />
-        </>
+        <div>
+            To be populated
+        </div>
     )
 }
 
