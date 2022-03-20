@@ -2,7 +2,7 @@ import React from 'react'
 import { RootContext, IRootContextType } from '../GlobalComponents/screenerLayoutWrapper'
 import styles from "../../styles/ComponentsStyles/NavbarComponentsStyles/screenerNavbar.module.scss"
 import { errorMessageWithClick } from './../../library/alertWindows'
-import { switchToRinkeby, switchToAvalanche } from './../../library/web3methods'
+import { switchToAvalanche } from './../../library/web3methods'
 import WrongNetworkIcon from "../../public/images/wrongNetwork.svg"
 import BigNumber from 'bignumber.js'
 import AccountInfoWindow from './accountInfoWindow'
