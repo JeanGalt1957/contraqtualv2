@@ -7,7 +7,7 @@ import Main from './Main';
 declare let window: any
 
 class App extends Component <any, any> {
-  async componentWillMount() {
+  async UNSAFE_componentWillMount() {
     await this.loadWeb3()
     await this.loadBlockchainData()
   }
