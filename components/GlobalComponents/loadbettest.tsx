@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import Web3 from 'web3';
-//import './App.css';
 import CreateBet from '../../public/abis/CreateBet.json'
 import Main from './Main';
 
 
 declare let window: any
 
-class App extends Component {
+class App extends Component <any, any> {
   async componentWillMount() {
     await this.loadWeb3()
     await this.loadBlockchainData()
