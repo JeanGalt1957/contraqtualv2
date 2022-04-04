@@ -98,11 +98,11 @@ const MenuPanel = (props: IMenuPanelProps): React.ReactElement => {
                 <div 
                     className={styles.menuElement}
 
-                >Sing Up as a receiver</div>
+                >Sign Up As a Receiver</div>
 
                 <div
                     className={styles.menuElement} 
-                >User guide</div>
+                >User Guide</div>
 
                 <div 
                     className={styles.menuElement}
