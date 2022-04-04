@@ -10,9 +10,12 @@ const About = (): React.ReactElement => {
 }, [])
 
   return (
-    <Container size="md" px="md">
-    Welcome to contraqtual!
-    </Container>
+    <>
+      <br />
+      <Container size="md" px="md">
+        Welcome to contraqtual!
+      </Container>
+    </>
   );
 };
 

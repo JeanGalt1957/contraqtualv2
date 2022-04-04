@@ -2,10 +2,12 @@ import React from "react"
 import CreateBet from '../../public/abis/CreateBet.json'
 
 
-const LoadBets = () => {
+const LoadBets = (props) => {
     return (
         <div>
-            hello from loadbets
+            Currently displaying bets filtered by: {props.filter}
+            <br />
+            Current category: {props.category}
         </div>
     )
 }

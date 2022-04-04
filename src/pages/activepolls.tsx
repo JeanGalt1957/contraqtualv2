@@ -16,11 +16,12 @@ const ActivePolls = (): React.ReactElement => {
 
     const Result = () => {
         return (
-        <div> Test page be populated 
-
-        <div>
-            <App/>
-        </div>
+        <div>  
+            <br />
+            Create a bet!
+            <div>
+                <App/>
+            </div>
         </div>
         
         )
