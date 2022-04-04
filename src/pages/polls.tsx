@@ -22,6 +22,8 @@ export default function Polls(): React.ReactElement {
     return (
         <div>
             <br />
+            Filter to see current bets!
+            <br />
             <Chips multiple={false} value={filter} onChange={setFilter}>
                 <Chip value="newest">Newest</Chip>
                 <Chip value="pool-price">Pool Price</Chip>
