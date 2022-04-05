@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import Web3 from 'web3';
+import { TextInput, Checkbox, Button, Group, Box } from '@mantine/core';
+import { useForm } from '@mantine/form';
 
 
-class Main extends Component {
+class Main2 extends Component {
   async loadWeb3() {
     if (window.ethereum) {
       window.web3 = new Web3(window.ethereum)
@@ -35,7 +37,9 @@ class Main extends Component {
     let adminaddress;
     adminaddress = '0x496764D595FBFC752FB73416759406e296b68851'; // revise to actual admin!
     let adminform;
-        adminform =  <form onSubmit={(event) => {
+        adminform =  
+        <Box sx={{ maxWidth: 300 }} mx="auto">
+        <form onSubmit={(event) => {
           event.preventDefault()
           const proposition = this.betproposition.value
           const odds = this.betodds.value
@@ -46,54 +50,60 @@ class Main extends Component {
           this.props.createyesnobet(proposition, odds, gasfees, adminfees, genesiscost)
         }}>
         <div className="form-group mr-sm-2">
-          <input
+          <TextInput
             id="betproposition"
-            type="text"
+            label="Proposition"
             ref={(input) => { this.betproposition = input }}
-            className="form-control"
+            // className="form-control"
             placeholder="Yes / no proposition..."
             required />
         </div>
         <div className="form-group mr-sm-2">
-          <input
+          <TextInput
             id="betodds"
-            type="text"
+            label="Odds"
             ref={(input) => { this.betodds = input }}
-            className="form-control"
+            // className="form-control"
             placeholder= "Odds..."
             required />
         </div>
         <div className="form-group mr-sm-2">
-          <input
+          <TextInput
             id="gasfees"
-            type="text"
+            label="Gas Fee"
             ref={(input) => { this.gasfees = input }}
-            className="form-control"
+            // className="form-control"
             placeholder="Gas fees..."
             defaultValue={250}
             required />
         </div>
         <div className="form-group mr-sm-2">
-          <input
+          <TextInput
             id="adminfees"
-            type="text"
+            label="Admin Fees"
             ref={(input) => { this.adminfees = input }}
-            className="form-control"
+            // className="form-control"
             placeholder="Admin fees..."
             defaultValue={250}
             required />
         </div>
         <div className="form-group mr-sm-2">
-          <input
+          <TextInput
             id="genesiscost"
-            type="text"
+            label="Genesis Cost"
             ref={(input) => { this.genesiscostX = input }}
-            className="form-control"
+            // className="form-control"
             placeholder={0.02}
             required />
         </div>
-        <button type="submit" className="btn btn-primary btn-block">Create</button>
-      </form>;
+        <Group position="right" mt="md">
+          <Button 
+            type="submit" 
+            //className="btn btn-primary btn-block"
+          >Create</Button>
+        </Group>
+      </form>
+      </Box>;
     
     let resolvebutton;
       resolvebutton =
@@ -384,4 +394,4 @@ class Main extends Component {
 }
 }
 
-export default Main;
+export default Main2;
