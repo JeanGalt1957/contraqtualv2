@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import { IRootContextType, RootContext } from '../../components/GlobalComponents/screenerLayoutWrapper'
 import LoadBets from '../../components/GlobalComponents/betloader'
 import { Chips, Chip, Select } from '@mantine/core';
+import BetCard from '../../components/GlobalComponents/BetCards';
 
 interface IPollsState {
     idSearched: string
@@ -38,6 +39,8 @@ export default function Polls(): React.ReactElement {
             ]} />
             <br />
             <LoadBets filter={filter} category={category} />
+            <br />
+            <BetCard />
         </div>
     )
 }

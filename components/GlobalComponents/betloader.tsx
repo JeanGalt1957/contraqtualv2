@@ -2,6 +2,7 @@ import React from "react"
 import CreateBet from '../../public/abis/CreateBet.json'
 
 
+
 const LoadBets = (props) => {
     return (
         <div>
