@@ -2,10 +2,10 @@
     "netWorkIdAvTest": "0xa869",
     "netWorkId": "0xa86a",
     "netWorkIdRink": "0x4",
-    "docsUrl": "https://docs.funtec.xyz/",
+    "docsUrl": "https://github.com/JeanGalt1957/contraqtualmarkets",
     "subgraphUrl": "https://api.thegraph.com/subgraphs/name/pabloturnes/thehard6",
     "infuraIPFSGateway": "https://ipfs.infura.io/ipfs",
-    "githubUrl": "https://github.com/FuntecProject",
+    "githubUrl": "https://github.com/JeanGalt1957/contraqtualmarkets",
     "ipfsPiningServiceUrl": "https://funtec.azurewebsites.net",
     "usdPriceUrl": "https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd"
 }
