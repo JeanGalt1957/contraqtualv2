@@ -1,0 +1,512 @@
+{
+    "createBetAddressRink": "0xF5129Af3c3349Dd03775f86473E102663f41A5fb",
+    "createBetAddress": "0xB068Bd570247Bd1FFBabbD566C4EC44345245Ad9",
+    "createBetAddressAvTest": "0x072853B77f255410D6963fC20290eCE199a08055",
+    "createBetTxHash": "0xc98bc1c0dfd7f513e5dcc71f73c80e19d952460fc02af3db4cf38eee63733fcb",
+    "createBetABI": [
+        {
+            "inputs": [],
+            "stateMutability": "payable",
+            "type": "constructor"
+        },
+        {
+            "inputs": [],
+            "name": "_owner",
+            "outputs": [
+                {
+                    "internalType": "address",
+                    "name": "",
+                    "type": "address"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "_index",
+                    "type": "uint256"
+                }
+            ],
+            "name": "betno",
+            "outputs": [],
+            "stateMutability": "payable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "name": "bets",
+            "outputs": [
+                {
+                    "internalType": "contract yesnobet",
+                    "name": "_bet",
+                    "type": "address"
+                },
+                {
+                    "internalType": "address payable",
+                    "name": "_admin",
+                    "type": "address"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_yesplayers",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_noplayers",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_genesisvotes",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_yesvotes",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_novotes",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_yeswagers",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_nowagers",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "string",
+                    "name": "_proposition",
+                    "type": "string"
+                },
+                {
+                    "internalType": "int256",
+                    "name": "_outcome",
+                    "type": "int256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_id",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "bool",
+                    "name": "_resolver",
+                    "type": "bool"
+                },
+                {
+                    "internalType": "address payable",
+                    "name": "_betaddress",
+                    "type": "address"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "bettorindex",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "_index",
+                    "type": "uint256"
+                }
+            ],
+            "name": "betyes",
+            "outputs": [],
+            "stateMutability": "payable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "string",
+                    "name": "_createproposition",
+                    "type": "string"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_genesisodds",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_gasfee",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_adminfee",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_genesiscost",
+                    "type": "uint256"
+                }
+            ],
+            "name": "createyesnobet",
+            "outputs": [],
+            "stateMutability": "payable",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "index",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "isOwner",
+            "outputs": [
+                {
+                    "internalType": "bool",
+                    "name": "",
+                    "type": "bool"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "_index",
+                    "type": "uint256"
+                }
+            ],
+            "name": "payno",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "_index",
+                    "type": "uint256"
+                }
+            ],
+            "name": "paypush",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "_index",
+                    "type": "uint256"
+                }
+            ],
+            "name": "payyes",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "_index",
+                    "type": "uint256"
+                }
+            ],
+            "name": "resolve",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "_index",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_player",
+                    "type": "uint256"
+                }
+            ],
+            "name": "revertno",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "_index",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_player",
+                    "type": "uint256"
+                }
+            ],
+            "name": "revertyes",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "_index",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "int256",
+                    "name": "_outcome",
+                    "type": "int256"
+                }
+            ],
+            "name": "setoracle",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "name": "stats",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "_betbalance",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_yesodds",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_noodds",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_genesiscost",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "_betindex",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_bettorindex",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_specificindex",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "address",
+                    "name": "_contract",
+                    "type": "address"
+                },
+                {
+                    "internalType": "address",
+                    "name": "_player",
+                    "type": "address"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_yesvotes",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_yesbalance",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_novotes",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_nobalance",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "bool",
+                    "name": "_yes",
+                    "type": "bool"
+                },
+                {
+                    "internalType": "bool",
+                    "name": "_no",
+                    "type": "bool"
+                }
+            ],
+            "name": "test",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "name": "tests",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "_betindex",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_bettorindex",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_specificindex",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "address",
+                    "name": "_contract",
+                    "type": "address"
+                },
+                {
+                    "internalType": "address",
+                    "name": "_player",
+                    "type": "address"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_playeryesvotes",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_playeryesbalance",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_playernovotes",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_playernobalance",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_time",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "bool",
+                    "name": "_isyes",
+                    "type": "bool"
+                },
+                {
+                    "internalType": "bool",
+                    "name": "_isno",
+                    "type": "bool"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "_index",
+                    "type": "uint256"
+                }
+            ],
+            "name": "updatestats",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "validatemaster",
+            "outputs": [
+                {
+                    "internalType": "address",
+                    "name": "",
+                    "type": "address"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        }
+    ],
+    "createBetBlockDeployed": ""
+}
